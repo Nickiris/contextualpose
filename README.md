@@ -1,2 +1,2 @@
 # contextualpose
-Using contextual information for small object multi-person pose estimation
+Fusing Global-Local Contextual Information for Small Object Multi-Person Pose Estimation
