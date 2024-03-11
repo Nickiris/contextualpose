@@ -64,7 +64,7 @@ class Trainer(object):
                   'Time: {batch_time.val:.3f}s ({batch_time.avg:.3f}s)\t' \
                   'Speed: {speed:.1f} samples/s\t' \
                   'Data: {data_time.val:.3f}s ({data_time.avg:.3f}s)\t' \
-                  '{multi}{contrastive}{single}{temp}'.format(
+                  '{multi}{contrastive}{single}'.format(
                 epoch, i, len(data_loader),
                 batch_time=batch_time,
                 speed=num_images / batch_time.val,
@@ -72,7 +72,6 @@ class Trainer(object):
                 multi=_get_loss_info(multi_loss_meter, 'multi'),
                 contrastive=_get_loss_info(contrastive_loss_meter, 'contrastive'),
                 single=_get_loss_info(single_loss_meter, 'single'),
-                temp=temp
             )
             logger.info(msg)
 
